@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Scripts/kendo/styles/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/Scripts/kendo/styles/kendo.default.min.css" rel="stylesheet" />
+    <link href="~/Scripts/kendo/styles/kendo.default.mobile.min.css" rel="stylesheet" />
+    <link href="~/Scripts/kendo/styles/kendo.rtl.min.css" rel="stylesheet" />
+    <script src="~/Scripts/kendo/js/jquery.min.js"></script>
+    <script src="~/Scripts/kendo/js/jszip.min.js"></script>
+    <script src="~/Scripts/kendo/js/kendo.all.min.js"></script>    
+</head>
+<body>
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
